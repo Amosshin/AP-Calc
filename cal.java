@@ -5,8 +5,8 @@ public class cal {
         Scanner input = new Scanner(System.in);
         double[] array = new double[8];
         for (int k = 0; k < array.length; k++) {
-            int a = k+1;
-            System.out.print("Enter your grade for period"+ a+"--> " );
+            int a = k + 1;
+            System.out.print("Enter your grade for period" + a + "--> ");
             array[k] = input.nextDouble();
             double AP = 1.09;
             double Honors = 1.06;
@@ -20,32 +20,32 @@ public class cal {
                 array[k] = array[k] * AP * credit;
             }
             if (w == 1.06) {
-                array[k] = array[k] * Honors* credit;
+                array[k] = array[k] * Honors * credit;
             }
             if (w == 1.02) {
-                array[k] = array[k] * ACP * credit;}
+                array[k] = array[k] * ACP * credit;
+            }
             if (w == 1) {
                 array[k] = array[k] * CP * credit;
+            } else {
+                System.out.print("error number, please enter the right number");
+                // break;}
             }
-            else{ System.out.print("error number, please enter the right number");
-                break;}
-            int TotalCredit = 0;
-            TotalCredit += credit;
+        }
+            System.out.print("enter total credit ");
+            int tc = input.nextInt();
+            double sum = 0;
+            for (int t = 0; t < array.length; t++) {
+                sum += array[t];
+            }
+            double gpa = sum / tc;
+            System.out.print(gpa);
+            //  double gpa = sum/
+
         }
 
-        double sum = 0;
-        for(int t = 0; t < array.length; t++) {
-            sum += array[t];
-            System.out.print(sum);
-        }
-        double gpa = sum/
 
     }
 
 
-
-
-
-
-}
 
