@@ -1,20 +1,18 @@
 import java.util.Scanner;
 public class cal {
-
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         double[] grade = new double[8];
-        double[] credit;
-        credit = new double[8];
+        double[] credit = new double[8];
         for (int k = 0; k < grade.length; k++) {
-            int a = k + 1;
-            System.out.print("Enter your grade for period" + a + "--> ");
+            int period = k + 1;
+            System.out.print("Enter your grade for period" + period + "--> ");
             grade[k] = input.nextDouble();
             double AP = 1.09;
             double Honors = 1.06;
             double ACP = 1.02;
             double CP = 1;
-            System.out.print("Enter the weighted value( CP as 1, ACP as 2, Honors as 3, AP as 4) -->  ");
+            System.out.print("Enter the weighted value( No class as 0, CP as 1, ACP as 2, Honors as 3, AP as 4) -->  ");
             int w = input.nextInt();
             System.out.print("Enter the credit ");
             credit[k] = input.nextInt();
@@ -30,7 +28,10 @@ public class cal {
             if (w == 1) {
                 grade[k] =grade[k] * CP * credit[k];
             }
-           if(w >= 5) {
+            if (w==0){
+                grade[k] = 0;
+            }
+          else{
                 System.out.println("error number, please enter the correct weighted value");
                grade[0] = 333;
               break;
@@ -51,20 +52,7 @@ public class cal {
             gpa = Math.round(RoundGpa)/100;
             System.out.print("Rounded gpa: " + gpa);
         }
-        System.out.print("Enter your SAT score");
-        int SAT = input.nextInt();
-
-
-
-
-
     }
-
-
-
-
-
-
 }
 
 
