@@ -1,6 +1,7 @@
 import java.util.Scanner;
-public class cal {
-    public static void StyleTwo(){
+
+public class CalTwo {
+    public static void StyleOne(){
         Scanner input = new Scanner(System.in);
         double[] grade = new double[8];
         double[] credit = new double[8];
@@ -17,13 +18,13 @@ public class cal {
             System.out.print("Enter the credit ");
             credit[k] = input.nextInt();
             if (w == 4) {
-               grade[k] = grade[k] * AP * credit[k];
+                grade[k] = grade[k] * AP * credit[k];
             }
             if (w == 3) {
-               grade[k] = grade[k] * Honors * credit[k];
+                grade[k] = grade[k] * Honors * credit[k];
             }
             if (w == 2) {
-               grade[k] = grade[k] * ACP * credit[k];
+                grade[k] = grade[k] * ACP * credit[k];
             }
             if (w == 1) {
                 grade[k] =grade[k] * CP * credit[k];
@@ -31,11 +32,11 @@ public class cal {
             if (w==0){
                 grade[k] = 0;
             }
-          else{
+            else{
                 System.out.println("error number, please enter the correct weighted value");
-               grade[0] = 333;
-              break;
-           }
+                grade[0] = 333;
+                break;
+            }
         }
         double tc = 0;
         for (int g = 0; g < credit.length; g++) {
@@ -45,7 +46,7 @@ public class cal {
         for (int t = 0; t < grade.length; t++) {
             sum += grade[t];
         }
-       double gpa = sum / tc;
+        double gpa = sum / tc;
         double RoundGpa = gpa * 100;
         if (grade[0] != 333) {
             System.out.print("Final gpa: " + gpa);
@@ -53,7 +54,11 @@ public class cal {
             System.out.print("Rounded gpa: " + gpa);
         }
     }
-}
+
+
+
+    }
+
 
 
 
