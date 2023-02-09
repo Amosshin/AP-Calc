@@ -3,7 +3,7 @@ public class overall {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("What gpa scale do you use?");
-        System.out.println("Type 1 for the 100scale and 2 for the 4.0 scale");
+        System.out.println("1. 100 scale and 2. 4.0 scale");
         int choice = input.nextInt();
         switch (choice) {
             case 1:
