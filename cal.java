@@ -52,7 +52,7 @@ public class cal {
         double gpa = sum / tc;
         if (grade[0] != 333) {
             System.out.print("Final gpa: " + gpa);
-            gpa =Math.round(gpa*100) / 100;
+            gpa =Math.round(gpa*100.0) / 100.0;
             System.out.print("Rounded gpa: " + gpa);
         }
     }
