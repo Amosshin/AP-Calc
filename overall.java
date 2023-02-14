@@ -3,17 +3,18 @@ public class overall {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("What gpa scale do you use?");
-        System.out.println("1. 100 scale and 2. 4.0 scale");
+        System.out.println("1. 100 scale 2. 4.0 scale");
         int choice = input.nextInt();
         switch (choice) {
             case 1:
-                cal.StyleOne();break;
+               System.out.println( "How many classes do you take?");
+                cal.StyleOne(input.nextInt());break;
             case 2:
-                cal.StyleTwo();break;
+                System.out.println( "How many classes do you take?");
+                cal.StyleTwo(input.nextInt());break;
             default: System.out.println("Error, please try it again");
-
-
         }
+        System.out.println();
 
         }
     }
